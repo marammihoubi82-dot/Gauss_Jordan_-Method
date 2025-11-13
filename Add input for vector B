@@ -29,4 +29,9 @@ for (int i = 0; i < N; i++) {
         cin >> A[i][j];
     }
 }
-
+double B[MAX];
+cout << "\nEnter the constants vector B (" << N << " values):\n";
+for (int i = 0; i < N; i++) {
+    cout << "B[" << i + 1 << "] = ";
+    cin >> B[i];
+}
