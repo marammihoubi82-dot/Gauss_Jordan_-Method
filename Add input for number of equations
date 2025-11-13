@@ -1,0 +1,22 @@
+
+
+#include <iostream>
+using namespace std;
+
+#define MAX 10
+
+int main() {
+    cout << "Gauss-Jordan Elimination Program" << endl;
+    return 0;
+}
+
+
+int N;
+cout << "Enter the number of equations (N <= " << MAX << "): ";
+cin >> N;
+
+if (N > MAX || N <= 0) {
+    cerr << "Error: N must be between 1 and " << MAX << endl;
+    return 1;
+}
+
