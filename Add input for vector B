@@ -42,4 +42,19 @@ void gaussJordan(double A[MAX][MAX], double B[MAX], int N) {
     }
 }
 
+for (int k = 0; k < N; k++) {
+    double pivot = A[k][k];
+    for (int j = 0; j < N; j++) A[k][j] /= pivot;
+    B[k] /= pivot;
+
+    for (int i = 0; i < N; i++) {
+        if (i == k) continue;
+        double factor = A[i][k];
+        for (int j = 0; j < N; j++) {
+            A[i][j] -= factor * A[k][j];
+        }
+        B[i] -= factor * B[k];
+    }
+}
+
 
